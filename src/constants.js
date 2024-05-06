@@ -7,23 +7,44 @@ export const features = [
   {
     icon: AssignmentIndIcon,
     title: "Title Suggested",
-    descp: "Details about the content or title geiven above."
+    descp: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
   },
   {
     icon: AirportShuttleIcon,
     title: "Title Suggested",
-    descp: "Details about the content or title geiven above."
+    descp: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
   },
   {
     icon: PeopleAltIcon,
     title: "Title Suggested",
-    descp: "Details about the content or title geiven above."
+    descp: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
   },
   {
     icon: CampaignIcon,
     title: "Title Suggested",
-    descp: "Details about the content or title geiven above."
+    descp: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
   },
+];
+
+export const whyUs = [
+  {
+    points: "Lorem ipsum dolor"
+  },
+  {
+    points: "Lorem ipsum dolor"
+  },
+  {
+    points: "Lorem ipsum dolor"
+  },
+  {
+    points: "Lorem ipsum dolor"
+  },
+  {
+    points: "Lorem ipsum dolor"
+  },
+  {
+    points: "Lorem ipsum dolor"
+  }
 ];
 
 export const items = [
@@ -33,11 +54,26 @@ export const items = [
   },
   {
     title: "About us",
-    link: "/404",
+    link: "/",
   },
   {
     title: "Contact us",
-    link: "/404",
+    link: "/",
+  }
+];
+
+export const footerItems = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "Services",
+    link: "/services",
+  },
+  {
+    title: "Contact us",
+    link: "/contactus",
   }
 ];
 

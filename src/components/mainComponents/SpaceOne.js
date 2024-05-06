@@ -14,7 +14,7 @@ const SpaceOne = () => {
                     justifyContent: "center", alignItems: "center",
                     color:"white"
                 }}>
-                    <Typography sx={{ fontSize: {xs:"2rem", sm:"4rem"}, fontWeight: "bold" }}>WE OFFER <br />COURIER SERVICES</Typography>
+                    <Typography sx={{ fontSize: {xs:"1.5rem", sm:"4rem"}, fontWeight: "bold" }}>WE OFFER <br />COURIER SERVICES</Typography>
                     <Typography sx={{width:"50%", color:"black"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum.</Typography>
                 </Box>

@@ -4,10 +4,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { items, logoName, mainColor, mainBGColor, DRAWER_WIDTH, textColor } from '../../constants';
 import { useNavigate } from 'react-router-dom';
 
-const navItems = items
+const navItems = items;
 
 function MainHeaderComponent(props) {
-    const { window } = props;
+    const { window, scrollToAbout } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const navigate = useNavigate();
 
@@ -22,7 +22,13 @@ function MainHeaderComponent(props) {
             <List>
                 {navItems.map((item, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} onClick={() => navigate(item.link)}>
+                        <ListItemButton sx={{ textAlign: 'center' }} onClick={() => {
+                            if (item.title === "About us") {
+                                scrollToAbout();
+                            } else {
+                                navigate(item.link);
+                            }
+                        }}>
                             <ListItemText primary={item.title} />
                         </ListItemButton>
                     </ListItem>
@@ -54,12 +60,18 @@ function MainHeaderComponent(props) {
 
                     <Typography
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: textColor, fontSize: "2rem", fontWeight: "bold", pl:5 }}                        onClick={() => navigate("/")}
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: textColor, fontSize: "2rem", fontWeight: "bold", pl: 5 }} onClick={() => navigate("/")}
                     >{logoName}</Typography>
 
                     <Box sx={{ display: { xs: 'none', sm: 'block' }, pr: 10 }}>
                         {navItems.map((item, index) => (
-                            <Button key={index} sx={{ color: mainColor, }} onClick={() => navigate(item.link)}>
+                            <Button key={index} sx={{ color: mainColor, }} onClick={() => {
+                                if (item.title === "About us") {
+                                    scrollToAbout();
+                                } else {
+                                    navigate(item.link);
+                                }
+                            }}>
                                 {item.title}
                             </Button>
                         ))}
