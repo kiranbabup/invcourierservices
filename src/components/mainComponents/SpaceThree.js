@@ -1,6 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { whyUs } from "../../constants";
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import exportImg from "../../images/export.jpg";
+import importImg from "../../images/importImg.jpg";
 
 const SpaceThree = ({ aboutRef }) => {
     return (
@@ -10,7 +12,7 @@ const SpaceThree = ({ aboutRef }) => {
                 <Box sx={{ width: { xs: "100%", sm: "45%" }, height: "60vh", }}
                     component="img"
                     alt="About image"
-                    src="/static/import.PNG"
+                    src={importImg}
                 />
                 <Box sx={{ width: { xs: "100%", sm: "45%" }, px: { xs: 0, sm: 3 } }}>
                     <Typography sx={{ fontSize: { xs: "1.5rem", sm: "3rem" }, fontWeight: "bold" }}>ABOUT US</Typography>
@@ -33,7 +35,7 @@ const SpaceThree = ({ aboutRef }) => {
                 <Box sx={{ width: { xs: "100%", sm: "45%" }, height: "60vh", }}
                     component="img"
                     alt="About image"
-                    src="/static/export.jpg"
+                    src={exportImg}
                 />
             </Box>
         </Box>

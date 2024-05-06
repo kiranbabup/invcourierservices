@@ -1,11 +1,13 @@
 import { Box, Typography } from "@mui/material";
+import introImg from "../../images/intro-bg.jpg";
+
 const SpaceOne = () => {
     return (
             <Box sx={{ position: "relative" }} >
                 <Box
                     component="img"
                     alt="Starting image"
-                    src="/static/intro-bg.jpg"
+                    src={introImg}
                     sx={{ width: "100%", height: {xs:"45vh", sm:"91vh"}, position: "absolute" }}
                 />
                 <Box sx={{
