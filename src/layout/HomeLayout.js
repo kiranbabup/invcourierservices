@@ -6,21 +6,27 @@ import { mainBGColor } from "../constants";
 import SpaceOne from "../components/mainComponents/SpaceOne";
 import SpaceTwo from "../components/mainComponents/SpaceTwo";
 import SpaceThree from "../components/mainComponents/SpaceThree";
+// import SpaceFour from '../components/mainComponents/SpaceFour';
 
 const HomeLayout = () => {
     const aboutRef = useRef(null);
+    const contactRef = useRef(null);
 
     const scrollToAbout = () => {
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
     };
+    const scrollTocontact = () => {
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
+    };
     return (
         <Box sx={{ backgroundColor: mainBGColor }}>
-            <MainHeaderComponent scrollToAbout={scrollToAbout}/>
+            <MainHeaderComponent scrollToAbout={scrollToAbout} scrollTocontact={scrollTocontact} />
             <Box py={4} />
             <SpaceOne/>
             <SpaceTwo/>
             <SpaceThree aboutRef={aboutRef}/>
-            <FooterComponent />
+            {/* <SpaceFour contactRef={contactRef}/> */}
+            <FooterComponent contactRef={contactRef}/>
         </Box>
     )
 }

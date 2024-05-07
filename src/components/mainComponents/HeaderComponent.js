@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const navItems = items;
 
 function MainHeaderComponent(props) {
-    const { window, scrollToAbout } = props;
+    const { window, scrollToAbout, scrollTocontact } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ function MainHeaderComponent(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography sx={{ my: 2, fontSize: "1.5rem", fontWeight: "bold" }} onClick={() => navigate("/")}>{logoName}</Typography>
+            <Typography sx={{ my: 2, fontSize: "1.5rem", fontWeight: "bold" }} onClick={() => navigate("/invcourierservices/home")}>{logoName}</Typography>
             <Divider />
             <List>
                 {navItems.map((item, index) => (
@@ -25,6 +25,8 @@ function MainHeaderComponent(props) {
                         <ListItemButton sx={{ textAlign: 'center' }} onClick={() => {
                             if (item.title === "About us") {
                                 scrollToAbout();
+                            } else if (item.title === "Contact us") {
+                                scrollTocontact();
                             } else {
                                 navigate(item.link);
                             }
@@ -46,7 +48,7 @@ function MainHeaderComponent(props) {
                 <Toolbar sx={{ backgroundColor: mainBGColor, }}>
 
                     <Box sx={{ display: { xs: "flex", sm: "none" }, width: { xs: "100%" }, justifyContent: { xs: "space-between" }, alignItems: { xs: "center" } }}>
-                        <Typography sx={{ my: 2, color: textColor, fontSize: "1.5rem", fontWeight: "bold" }} onClick={() => navigate("/")}>{logoName}</Typography>
+                        <Typography sx={{ my: 2, color: textColor, fontSize: "1.5rem", fontWeight: "bold" }} onClick={() => navigate("/invcourierservices/home")}>{logoName}</Typography>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
@@ -60,7 +62,7 @@ function MainHeaderComponent(props) {
 
                     <Typography
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: textColor, fontSize: "2rem", fontWeight: "bold", pl: 5 }} onClick={() => navigate("/")}
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: textColor, fontSize: "2rem", fontWeight: "bold", pl: 5 }} onClick={() => navigate("/invcourierservices/home")}
                     >{logoName}</Typography>
 
                     <Box sx={{ display: { xs: 'none', sm: 'block' }, pr: 10 }}>
@@ -68,6 +70,8 @@ function MainHeaderComponent(props) {
                             <Button key={index} sx={{ color: mainColor, }} onClick={() => {
                                 if (item.title === "About us") {
                                     scrollToAbout();
+                                } else if (item.title === "Contact us") {
+                                    scrollTocontact();
                                 } else {
                                     navigate(item.link);
                                 }
